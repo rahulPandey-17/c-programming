@@ -1,6 +1,7 @@
 // program to check if a number is prime or not using do-while loop
 
 #include <stdio.h>
+#include <math.h>
 
 int main() {
 
@@ -23,16 +24,17 @@ int main() {
         return 0;
     }
 
+    int limit = sqrt(num);
     int i = 3;
     int isPrime = 1;
-    
+
     do {
         if(num % i == 0) {
             isPrime = 0;
             break;
         }
         i += 2;
-    }while(i <= (num / 2));
+    }while(i <= limit);
 
     if(isPrime) {
         printf("%d is a prime number\n", num);

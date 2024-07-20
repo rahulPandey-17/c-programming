@@ -1,13 +1,11 @@
-// program to find if a number is prime or not using do-while loop
+// program to check if a number is prime or not using do-while loop
 
 #include <stdio.h>
 
 int main() {
 
     int num;
-    int i = 2;
-    int flag = 0;
-    printf("Enter a number : ");
+    printf("Enter the number : ");
     scanf("%d", &num);
 
     if(num < 2) {
@@ -20,17 +18,23 @@ int main() {
         return 0;
     }
 
-    do {
+    if(num % 2 == 0) {
+        printf("%d is not a prime number\n", num);
+        return 0;
+    }
 
+    int i = 3;
+    int isPrime = 1;
+    
+    do {
         if(num % i == 0) {
-            flag = 1;
+            isPrime = 0;
             break;
         }
-        i++;
-
+        i += 2;
     }while(i <= (num / 2));
 
-    if(flag == 0) {
+    if(isPrime) {
         printf("%d is a prime number\n", num);
     }
     else {

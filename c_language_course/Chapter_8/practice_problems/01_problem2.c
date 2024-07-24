@@ -3,27 +3,28 @@
 
 int main() {
 
-    char s1[20];
-    char s2[20];
-    int i;
+    char name[20];
+    char Name[20];
 
-    // taking input using for loop and %c
+    // taking input using %c
 
     printf("Enter the first string : ");
-    for(i = 0 ; i < 20 ; i++) {
-        scanf("%c", &s1[i]);
-        if(s1[i] == '\n') {
+    for(int i = 0 ; i < 20 ; i++) {
+        scanf("%c", &name[i]);
+        if(name[i] == '\n') {
+            name[i] = '\0';
             break;
         }
     }
-    s1[i] = '\0';
 
     // taking input using %s
 
     printf("Enter the second string : ");
-    scanf("%s", s2);
+    scanf("%s", Name);
 
-    if(strcmp(s1, s2) == 0) {
+    // checking if the strings are equal
+
+    if(strcmp(name, Name) == 0) {
         printf("Both strings are equal\n");
     }
     else {

@@ -24,7 +24,7 @@ int main() {
     printf("Enter the string : ");
     fgets(str, sizeof(str), stdin);
 
-    printf("The length of the string is %d\n", strcnt(str));
+    printf("Length of the string is %d\n", strcnt(str));
 
     return 0;
 

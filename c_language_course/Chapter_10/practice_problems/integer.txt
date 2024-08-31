@@ -1,0 +1,2 @@
+22
+After doubling the value already present in the file we get : 44
